@@ -19,7 +19,7 @@ using System.Globalization;
 using System.Collections;
 using System.Security.Policy;
 using System.Xml.Linq;
-using System.Runtime.InteropServices;
+
 
 namespace lora1
 {
@@ -51,13 +51,9 @@ namespace lora1
             RollingPointPairList list6 = new RollingPointPairList(60000);
 
 
-            LineItem irrNode1 = myPane.AddCurve("Node 1", list1, Color.Red, SymbolType.None); // 0
-            LineItem irrNode2 = myPane.AddCurve("Node 2", list2, Color.Blue, SymbolType.None); // 1
-            LineItem iscNode1 = myPane.AddCurve("Node 1", list3, Color.YellowGreen, SymbolType.None);//2
-            LineItem iscNode2 = myPane.AddCurve("Node 2", list4, Color.Purple, SymbolType.None);//3
-            LineItem temNode1 = myPane.AddCurve("Node 1", list5, Color.Green, SymbolType.None);//4
-            LineItem temNode2 = myPane.AddCurve("Node 2", list6, Color.Orange, SymbolType.None);
-            myPane.YAxis.Scale.Min = 0;
+            LineItem irrNode1 = myPane.AddCurve("Irradiance", list1, Color.Red, SymbolType.None); // 0
+            LineItem irrNode2 = myPane.AddCurve("Irradiacnefadjf", list2, Color.Blue, SymbolType.None); // 1
+          
             myPane.YAxis.Scale.Max = 100;
             myPane.YAxis.Scale.MajorStep = 10;
             myPane.YAxis.Scale.MinorStep = 1;
@@ -66,9 +62,8 @@ namespace lora1
             myPane.XAxis.Scale.FontSpec.Angle = 60;
             myPane.XAxis.Scale.FontSpec.Size = 12;
             myPane.XAxis.Scale.MajorUnit = DateUnit.Second;
-            myPane.XAxis.Scale.MajorStep = 10;
-            myPane.XAxis.Scale.MinorUnit = DateUnit.Second;
-            myPane.XAxis.Scale.MinorStep = 1;
+            
+          
         }
         private void label1_Click(object sender, EventArgs e)
         {
@@ -204,13 +199,13 @@ namespace lora1
                 }
                
 
-                // THEM DU LIEU VAO DO THI
+               
 
 
 
 
             }
-            // VE DO THI
+          
         }
 
         public void threadChecklist()   // BAT TAT LINE DO THI
@@ -430,10 +425,7 @@ namespace lora1
                          lr.IsVisible = false;
                          zedGraphControl1.GraphPane.CurveList[i].Label.IsVisible = false;
                      }
-                    zedGraphControl1.AxisChange();
-                    zedGraphControl1.Invalidate();
-                    zedGraphControl1.Refresh();
-
+               
                 }
             }
         }
